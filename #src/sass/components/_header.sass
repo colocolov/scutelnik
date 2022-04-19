@@ -1,0 +1,34 @@
+.header
+  margin-top: 28px
+  &-container
+    display: flex
+    align-items: center
+
+.logo
+  width: 50px
+  transition: 1s
+
+.nav
+  margin-left: 214px
+  &__list
+    display: flex
+    align-items: center
+  &__item
+    position: relative
+    &:not(:last-child)
+      margin-right: 42px
+      &::before
+        position: absolute
+        content: ''
+        display: block
+        bottom: -6px
+        // left: 0
+        // right: 0
+        height: 2px
+        width: 0%
+        background-color: $red
+        transition: 0.5s
+    &:last-child
+      transition: 0.5s
+      margin-left: 120px
+    @include font(500, 14px, 120%)
