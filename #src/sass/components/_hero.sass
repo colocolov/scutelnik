@@ -50,7 +50,7 @@
       content: ''
       top: 0
       left: 0
-      transform: translate(-44px, -143px)
+      // transform: translate(-44px, -143px)
       width: 484px
       height: 484px
       // border-radius: 50%
@@ -64,6 +64,7 @@
       border-radius: 50%
       opacity: 0.7
       z-index: -1
+      animation: hero 15s infinite linear
 
   &__title
     color: $red
@@ -85,3 +86,9 @@
       height: 3px
       width: 100%
       background-color: $red
+
+@keyframes hero
+  0%
+    transform: translate(-44px, -143px) rotate(0deg)
+  100%
+    transform: translate(-44px, -143px) rotate(-360deg)
