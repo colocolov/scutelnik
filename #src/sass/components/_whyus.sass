@@ -100,8 +100,8 @@
 
       background: radial-gradient(47.11% 35.65% at 32.69% 32.89%, #E8101E 0%, #CA161F 17.71%, #AA0E14 36.46%, #9A0A0F 56.25%, #880609 72.92%, #700000 100%)
       box-shadow: 0px 0px 30px 1px #9A0A0F
-      transform: matrix(-1, 0, 0, 1, 0, 0)
-      transform: translate(-53%, -48%)
+
+      transform: translate(-53%, -48%) matrix(-1, 0, 0, 1, 0, 0)
       // background: radial-gradient(74.63% 74.63% at 12.05% 22.39%, #E2001B 0%, #700000 100%)
       z-index: -2
 
@@ -122,7 +122,7 @@
       border-radius: 50%
       opacity: 0.7
       z-index: -3
-      animation: circle 10s infinite linear
+      animation: circle 15s infinite linear
   &__text
     max-width: 375px
     font-family: 'IkraSlab'

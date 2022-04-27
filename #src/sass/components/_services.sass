@@ -1,0 +1,79 @@
+.services
+  background-color: $white
+  padding-top: 42px
+  padding-bottom: 200px
+  &__title
+    color: $bgc
+    margin-bottom: 104px
+  &__car
+    position: relative
+    height: 890px
+    margin: 0 auto
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding-right: 62px
+    padding-left: 76px
+    z-index: 2
+  &__list
+    // position: relative
+    // z-index: 5
+    display: flex
+    // flex-wrap: wrap
+    // justify-content: flex-start
+    flex-direction: column
+    padding-top: 149px
+    // padding-bottom: 238px
+    // height: 652px
+    &-left
+      // align-items: flex-end
+      text-align: right
+      & .services__item
+        &:not(:nth-child(4))
+          margin-bottom: 125px
+    &-right
+      & .services__item
+        &::before
+          position: absolute
+          content: ''
+          top: 0
+          right: 0
+          height: 3px
+          width: 150%
+          background-color: $red
+          transform: translate(-108%, 11px)
+
+  &__item
+    position: relative
+    font-family: 'Gilroy'
+    @include font(500, 20px, 115%)
+    color: #000000
+    max-width: 184px
+    &:nth-child(n+3)
+      color: $white
+      &::before
+        background-color: $white
+    &:not(:nth-child(4))
+      margin-bottom: 104px
+    &::before
+      position: absolute
+      content: ''
+      top: 0
+      left: 0
+      height: 3px
+      width: 150%
+      background-color: $red
+      transform: translate(70%, 11px)
+
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    transform: translateX(-7%)
+    z-index: 2
+  &__btn
+    position: relative
+    z-index: 2
+    margin: 0 auto
+    display: block
+    transform: translateY(-61px)

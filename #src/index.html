@@ -5,12 +5,15 @@
     <div class="wrapper">
       @include('html/header.html') @include('html/_hero.html')
 
-      <main class="main">@include('html/_whyus.html')</main>
+      <main class="main">
+        @include('html/_whyus.html') @include('html/_services.html')
+        @include('html/_works.html')
+      </main>
       @include('html/footer.html')
     </div>
 
     <!-- подключение скриптов -->
-    <script src="js/libs.js"></script>
+    <!-- <script src="js/libs.js"></script> -->
     <script src="js/main.min.js"></script>
   </body>
 </html>
