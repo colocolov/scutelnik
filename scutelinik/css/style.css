@@ -689,10 +689,26 @@ input {
 .works {
   position: relative;
   padding-top: 580px;
+  padding-bottom: 255px;
   -webkit-transform: translateY(-748px);
   -ms-transform: translateY(-748px);
   transform: translateY(-748px);
   background: #000;
+}
+.works::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 1035px;
+  height: 989px;
+  background: url("../images/bg/works-circles.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  -webkit-transform: translate(16%, -102px);
+  -ms-transform: translate(16%, -102px);
+  transform: translate(16%, -102px);
 }
 .works::before {
   position: absolute;
@@ -703,6 +719,109 @@ input {
   right: 0;
   background: -o-radial-gradient(50% -2.52%, 90.29% 65.53%, #FA2230 0%, rgba(202, 0, 19, 0) 99.55%);
   background: radial-gradient(90.29% 65.53% at 50% -2.52%, #FA2230 0%, rgba(202, 0, 19, 0) 99.55%);
+}
+.works__wrap {
+  padding: 54px 62px 89px 60px;
+  background: url("../images/bg/works-border.svg"), -o-linear-gradient(17.5deg, rgba(112, 0, 0, 0.2) 1.96%, rgba(246, 246, 246, 0.2) 98.65%);
+  background: url("../images/bg/works-border.svg"), linear-gradient(72.5deg, rgba(112, 0, 0, 0.2) 1.96%, rgba(246, 246, 246, 0.2) 98.65%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  border-radius: 50px;
+}
+.works__title {
+  margin-bottom: 92px;
+}
+.works__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.works__item {
+  position: relative;
+  padding-left: 35px;
+}
+.works__item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: -o-radial-gradient(64% 40.5%, 40.99% 30.57%, #E8101E 0%, #CA161F 17.71%, #AA0E14 36.46%, #9A0A0F 56.25%, #880609 72.92%, #700000 100%);
+  background: radial-gradient(40.99% 30.57% at 64% 40.5%, #E8101E 0%, #CA161F 17.71%, #AA0E14 36.46%, #9A0A0F 56.25%, #880609 72.92%, #700000 100%);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(112, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px 3px rgba(112, 0, 0, 0.3);
+  border-radius: 50%;
+}
+.works__item:not(:last-child) {
+  margin-bottom: 58px;
+}
+.works__item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  top: 19px;
+  left: 9px;
+  width: 1px;
+  height: 110px;
+  background: #ffffff;
+}
+.works__item-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 115%;
+  color: #FA2230;
+}
+.works__item-text {
+  width: 255px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 118%;
+}
+.works__order {
+  width: 630px;
+}
+.works__order-wrap {
+  position: relative;
+  width: 630px;
+  padding: 46px 50px 95px 50px;
+  background: url("../images/bg/works-order-border.svg"), -o-linear-gradient(17.07deg, rgba(112, 0, 0, 0.2) 0%, rgba(246, 246, 246, 0.2) 99.08%);
+  background: url("../images/bg/works-order-border.svg"), linear-gradient(72.93deg, rgba(112, 0, 0, 0.2) 0%, rgba(246, 246, 246, 0.2) 99.08%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50px;
+  margin-bottom: 25px;
+}
+.works__order-wrap::before {
+  position: absolute;
+  content: "";
+  bottom: -29px;
+  right: -265px;
+  height: 288px;
+  width: 533px;
+  background: url("../images/bg/works-car.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.works__order-title {
+  font-family: "IkraSlab";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  margin-bottom: 26px;
+}
+.works__text {
+  width: 309px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 115%;
+}
+.works__btn {
+  padding: 19px 37px;
 }
 
 .nav__item:hover::before {
