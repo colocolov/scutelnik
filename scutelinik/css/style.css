@@ -690,9 +690,7 @@ input {
   position: relative;
   padding-top: 580px;
   padding-bottom: 255px;
-  -webkit-transform: translateY(-748px);
-  -ms-transform: translateY(-748px);
-  transform: translateY(-748px);
+  margin-top: -748px;
   background: #000;
 }
 .works::after {
@@ -822,6 +820,16 @@ input {
 }
 .works__btn {
   padding: 19px 37px;
+}
+
+.call {
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.call__title {
+  color: #000;
+  margin-bottom: 22px;
 }
 
 .nav__item:hover::before {
