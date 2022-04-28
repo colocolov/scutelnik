@@ -267,10 +267,10 @@ input {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.nav__item:last-child {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+.nav__item:last-child a {
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
   margin-left: 120px;
 }
 
@@ -742,6 +742,8 @@ input {
   -webkit-transform: translate(9%, 156px);
   -ms-transform: translate(9%, 156px);
   transform: translate(9%, 156px);
+  -webkit-animation: circs 35s infinite linear;
+  animation: circs 35s infinite linear;
 }
 .works__wrap {
   position: relative;
@@ -849,6 +851,27 @@ input {
   padding: 19px 37px;
 }
 
+@-webkit-keyframes circs {
+  0% {
+    -webkit-transform: translate(9%, 156px) rotate(0deg);
+    transform: translate(9%, 156px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(9%, 156px) rotate(-360deg);
+    transform: translate(9%, 156px) rotate(-360deg);
+  }
+}
+
+@keyframes circs {
+  0% {
+    -webkit-transform: translate(9%, 156px) rotate(0deg);
+    transform: translate(9%, 156px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(9%, 156px) rotate(-360deg);
+    transform: translate(9%, 156px) rotate(-360deg);
+  }
+}
 .call {
   background-color: #ffffff;
   padding-top: 50px;
@@ -888,6 +911,7 @@ input {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  cursor: pointer;
 }
 .footer__input::-webkit-input-placeholder {
   color: #FA2230;
@@ -964,7 +988,7 @@ input {
 .nav__item:hover::before {
   width: 100%;
 }
-.nav__item:hover:last-child {
+.nav__item:hover:last-child a {
   color: #FA2230;
 }
 

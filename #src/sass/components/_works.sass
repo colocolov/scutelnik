@@ -29,6 +29,7 @@
       background-repeat: no-repeat
       background-size: contain
       transform: translate(9%, 156px)
+      animation: circs 35s infinite linear
   &__wrap
     position: relative
     padding: 54px 62px 89px 60px
@@ -110,3 +111,9 @@
 
   &__btn
     padding: 19px 37px
+
+@keyframes circs
+  0%
+    transform: translate(9%, 156px) rotate(0deg)
+  100%
+    transform: translate(9%, 156px) rotate(-360deg)
