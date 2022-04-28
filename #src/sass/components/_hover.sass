@@ -9,3 +9,20 @@
 
 .logo:hover
   transform: rotate(360deg)
+
+.btn:hover
+  // transform: scale(1.01)
+  letter-spacing: 0.1px
+  background: linear-gradient(270deg, #f90615 0%, #640000 100%)
+  &::before
+    top: -7px
+    left: -1px
+    transform: rotate(-21deg)
+    opacity: 0.2
+
+.footer__input:focus
+  border: 1px solid $red
+  background: transparent
+
+.footer__item:hover a
+  color: $red

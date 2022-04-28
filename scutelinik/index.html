@@ -26,10 +26,10 @@
     </a>
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#">Главная</a></li>
-        <li class="nav__item"><a href="#">Услуги</a></li>
-        <li class="nav__item"><a href="#">О нас</a></li>
-        <li class="nav__item"><a href="#">Контакты</a></li>
+        <li class="nav__item"><a href="index.html">Главная</a></li>
+        <li class="nav__item"><a href="#services">Услуги</a></li>
+        <li class="nav__item"><a href="#works">О нас</a></li>
+        <li class="nav__item"><a href="#contacts">Контакты</a></li>
         <li class="nav__item"><a href="#">Тел: +373 (69) 592 042</a></li>
       </ul>
     </nav>
@@ -130,7 +130,7 @@
     </div>
   </div>
 </section>
- <section class="services">
+ <section class="services" id="services">
   <div class="container">
     <h2 class="heading services__title">Наши <span>услуги</span></h2>
     <div class="services__car">
@@ -152,8 +152,8 @@
   </div>
 </section>
 
-        <section class="works">
-  <div class="container">
+        <section class="works" id="works">
+  <div class="container works__container">
     <div class="works__wrap">
       <h2 class="heading works__title"><span>Как</span> мы работаем?</h2>
       <div class="works__info">
@@ -209,8 +209,42 @@
 </section>
 
       </main>
-      <footer class="footer">
-  <div class="container"></div>
+      <footer class="footer" id="contacts">
+  <div class="container">
+    <h2 class="heading footer__title">Оставить <span>заявку</span></h2>
+    <form class="footer__form" action="">
+      <input
+        class="footer__input"
+        name="name"
+        value=""
+        placeholder="Имя:"
+        type="text"
+      />
+      <input
+        class="footer__input"
+        name="phone"
+        value=""
+        placeholder="Телефон:"
+        type="phone"
+      />
+      <button class="btn-reset btn footer__btn">Отправить</button>
+    </form>
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a href="tel:+37369592042">Тел: +373 (69) 592 042</a>
+      </li>
+      <li class="footer__item">
+        <a href="tel:+37369592042">Тел: +373 (69) 592 042</a>
+      </li>
+      <li class="footer__item">
+        <p>Адрес: str. Criuleni 26</p>
+        <p>MD. Chisinau</p>
+      </li>
+      <li class="footer__item">
+        <a href="mailto:">e-mail:sanea-meiko@mail.ru</a>
+      </li>
+    </ul>
+  </div>
 </footer>
 
     </div>

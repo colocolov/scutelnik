@@ -173,6 +173,7 @@ input {
 }
 
 .btn {
+  position: relative;
   background: -webkit-gradient(linear, right top, left top, from(#FA2230), to(#700000));
   background: -o-linear-gradient(right, #FA2230 0%, #700000 100%);
   background: linear-gradient(270deg, #FA2230 0%, #700000 100%);
@@ -183,6 +184,28 @@ input {
   line-height: 115%;
   color: #ffffff;
   padding: 19px 61px;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  overflow: hidden;
+}
+.btn::before {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  top: -7px;
+  left: -31px;
+  background-image: url(../images/logo-white.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(-81deg);
+  -ms-transform: rotate(-81deg);
+  transform: rotate(-81deg);
+  height: 80px;
+  width: 80px;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .unvisible {
@@ -264,12 +287,12 @@ input {
   height: 100%;
   width: 100%;
   background-image: url(../images/bg/head-bg.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position-x: calc(50% + 129px);
-  -webkit-transform: translateY(-241px);
-  -ms-transform: translateY(-241px);
-  transform: translateY(-241px);
+  -webkit-transform: translateY(-146px);
+  -ms-transform: translateY(-146px);
+  transform: translateY(-146px);
   z-index: -3;
 }
 .hero::after {
@@ -693,21 +716,6 @@ input {
   margin-top: -748px;
   background: #000;
 }
-.works::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 1035px;
-  height: 989px;
-  background: url("../images/bg/works-circles.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
-  -webkit-transform: translate(16%, -102px);
-  -ms-transform: translate(16%, -102px);
-  transform: translate(16%, -102px);
-}
 .works::before {
   position: absolute;
   content: "";
@@ -718,7 +726,25 @@ input {
   background: -o-radial-gradient(50% -2.52%, 90.29% 65.53%, #FA2230 0%, rgba(202, 0, 19, 0) 99.55%);
   background: radial-gradient(90.29% 65.53% at 50% -2.52%, #FA2230 0%, rgba(202, 0, 19, 0) 99.55%);
 }
+.works__container {
+  position: relative;
+}
+.works__container::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 1035px;
+  height: 989px;
+  background: url("../images/bg/works-circles.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: translate(9%, 156px);
+  -ms-transform: translate(9%, 156px);
+  transform: translate(9%, 156px);
+}
 .works__wrap {
+  position: relative;
   padding: 54px 62px 89px 60px;
   background: url("../images/bg/works-border.svg"), -o-linear-gradient(17.5deg, rgba(112, 0, 0, 0.2) 1.96%, rgba(246, 246, 246, 0.2) 98.65%);
   background: url("../images/bg/works-border.svg"), linear-gradient(72.5deg, rgba(112, 0, 0, 0.2) 1.96%, rgba(246, 246, 246, 0.2) 98.65%);
@@ -727,6 +753,7 @@ input {
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   border-radius: 50px;
+  z-index: 3;
 }
 .works__title {
   margin-bottom: 92px;
@@ -831,6 +858,108 @@ input {
   color: #000;
   margin-bottom: 22px;
 }
+.call__btn {
+  padding: 19px 66px;
+}
+
+.footer {
+  padding-top: 93px;
+  padding-bottom: 100px;
+}
+.footer__title {
+  margin-bottom: 53px;
+}
+.footer__form {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.footer__input {
+  background: #2F2F2F;
+  border: 1px solid rgba(246, 246, 246, 0.3);
+  border-radius: 20px;
+  padding: 18px 35px;
+  color: #ffffff;
+  width: 465px;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.footer__input::-webkit-input-placeholder {
+  color: #FA2230;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.footer__input::-moz-placeholder {
+  color: #FA2230;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.footer__input:-ms-input-placeholder {
+  color: #FA2230;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.footer__input::-ms-input-placeholder {
+  color: #FA2230;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.footer__input::placeholder {
+  color: #FA2230;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.footer__btn {
+  padding: 19px 69px;
+}
+.footer__list {
+  background: #2F2F2F;
+  border: 1px solid rgba(246, 246, 246, 0.3);
+  border-radius: 20px;
+  padding: 29px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 120px;
+}
+.footer__item {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 115%;
+}
+.footer__item:nth-child(3) {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+.footer__item:nth-child(4) {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+.footer__item a {
+  -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+.footer__item p:not(:last-child) {
+  margin-bottom: 14px;
+}
 
 .nav__item:hover::before {
   width: 100%;
@@ -843,5 +972,29 @@ input {
   -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
+}
+
+.btn:hover {
+  letter-spacing: 0.1px;
+  background: -webkit-gradient(linear, right top, left top, from(#f90615), to(#640000));
+  background: -o-linear-gradient(right, #f90615 0%, #640000 100%);
+  background: linear-gradient(270deg, #f90615 0%, #640000 100%);
+}
+.btn:hover::before {
+  top: -7px;
+  left: -1px;
+  -webkit-transform: rotate(-21deg);
+  -ms-transform: rotate(-21deg);
+  transform: rotate(-21deg);
+  opacity: 0.2;
+}
+
+.footer__input:focus {
+  border: 1px solid #FA2230;
+  background: transparent;
+}
+
+.footer__item:hover a {
+  color: #FA2230;
 }
 /*# sourceMappingURL=style.css.map */
