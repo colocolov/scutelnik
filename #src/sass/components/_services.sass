@@ -77,3 +77,62 @@
     margin: 0 auto
     display: block
     transform: translateY(-61px)
+
+  &__all
+    position: relative
+    z-index: 3
+    // @include
+    display: none
+    justify-content: space-between
+    // align-items: flex-start
+    // flex-basis: 0%
+
+    padding-left: 92px
+    padding-right: 102px
+    padding-top: 50px
+    padding-bottom: 50px
+    margin-bottom: 100px
+    // height: 0px
+    transition: all 0.5s linear
+    &::before
+      position: absolute
+      content: ''
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: url(../images/bg/services-circles.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      z-index: -1
+    &.active
+      display: flex
+      // height: 100%
+      transition: all 0.5s ease-in
+    &-list
+      position: relative
+      z-index: 2
+      background: url(../images/bg/services-border.svg), linear-gradient(252.32deg, rgba(246, 246, 246, 0.2) 29.42%, rgba(112, 0, 0, 0.2) 100%)
+      background-size: contain
+      background-repeat: no-repeat
+      border-radius: 50px
+      backdrop-filter: blur(30px)
+      padding: 50px 54px 66px 54px
+      width: 385px
+      // flex: 1 0 auto
+    &-item
+      @include font(500, 16px, 130%)
+      span
+        position: relative
+        &::after
+          position: absolute
+          content: ''
+          bottom: -2px
+          left: 0
+          width: 100%
+          height: 2px
+          background: $white
+          border-radius: 5px
+        // border-bottom: 2px solid $white
+      &:not(:last-child)
+        margin-bottom: 30px

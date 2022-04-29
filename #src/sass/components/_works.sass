@@ -6,6 +6,10 @@
   margin-top: -748px
   // transform: translateY(-748px)
   background: #000
+  &.active
+    padding-top: 1292px
+    margin-top: -1440px
+    // transition: all 0.5s linear
 
   &::before
     position: absolute
@@ -29,7 +33,7 @@
       background-repeat: no-repeat
       background-size: contain
       transform: translate(9%, 156px)
-      animation: circs 35s infinite linear
+      // animation: circs 35s infinite linear
   &__wrap
     position: relative
     padding: 54px 62px 89px 60px
@@ -111,6 +115,7 @@
 
   &__btn
     padding: 19px 37px
+    display: inline-block
 
 @keyframes circs
   0%
