@@ -337,13 +337,14 @@ input {
   background: url(../images/bg/head-blur.svg), linear-gradient(136.6deg, rgba(57, 57, 57, 0.5) 16.51%, rgba(57, 57, 57, 0) 60.77%);
   background-size: contain;
   background-repeat: no-repeat;
+  -webkit-transform: translate(-44px, -143px);
+  -ms-transform: translate(-44px, -143px);
+  transform: translate(-44px, -143px);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   border-radius: 50%;
   opacity: 0.7;
   z-index: -1;
-  -webkit-animation: heros 10s 3s infinite linear;
-  animation: heros 10s 3s infinite linear;
 }
 .hero__title {
   color: #FA2230;
@@ -551,6 +552,9 @@ input {
   content: "";
   top: 0;
   left: 0;
+  -webkit-transform: translate(98px, -300px);
+  -ms-transform: translate(98px, -300px);
+  transform: translate(98px, -300px);
   width: 373px;
   height: 373px;
   background: url(../images/bg/whyus-blur.svg), -o-linear-gradient(315.92deg, rgba(57, 57, 57, 0.5) 16.65%, rgba(57, 57, 57, 0) 87.39%);
@@ -562,8 +566,6 @@ input {
   border-radius: 50%;
   opacity: 0.7;
   z-index: -3;
-  -webkit-animation: circle 15s infinite linear;
-  animation: circle 15s infinite linear;
 }
 .whyus__text {
   max-width: 375px;

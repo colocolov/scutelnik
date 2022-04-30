@@ -27,6 +27,7 @@ let path = {
     images: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
     svg: source_folder + "/images/icons/*.svg",
+    svgBg: source_folder + "/images/bg/*.svg",
   },
   clean: "./" + project_folder + "/",
 };
@@ -274,6 +275,24 @@ gulp.task("svgSprite", function () {
 });
 //---END
 
+// для фонов
+function svgBgSprite() {
+  return src([source_folder + "/images/bg/*.svg"])
+    .pipe(
+      svgsprite({
+        mode: {
+          stack: {
+            sprite: "../bg/bg.svg",
+            // example: true,
+          },
+        },
+      })
+    )
+    .pipe(dest(path.build.images))
+    .pipe(browsersync.stream());
+}
+//---END
+
 function svgSprit() {
   return src([source_folder + "/images/icons/*.svg"])
     .pipe(
@@ -326,10 +345,11 @@ function watchFiles(params) {
   gulp.watch([path.watch.images], images);
   gulp.watch([path.watch.fonts], fonts);
   gulp.watch([path.watch.svg], svgSprit);
+  gulp.watch([path.watch.svgBg], svgBgSprite);
 }
 
 let build = gulp.series(
-  gulp.parallel(css, html, js, jsAdd, fonts, images, svgSprit)
+  gulp.parallel(css, html, js, jsAdd, fonts, images, svgSprit, svgBgSprite)
 );
 let watch = gulp.parallel(build, watchFiles, browserSync);
 // выгрузка в готовый проект
@@ -343,7 +363,8 @@ let done = gulp.series(
     jsAdd,
     fonts,
     images,
-    svgSprit
+    svgSprit,
+    svgBgSprite
   ),
   imagesConvert
 );
