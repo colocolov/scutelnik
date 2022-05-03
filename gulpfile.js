@@ -125,13 +125,6 @@ function css() {
         outputStyle: "expanded",
       })
     )
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 5 versions"],
-        grid: true,
-        cascade: false,
-      })
-    )
     .pipe(sourcemaps.write("."))
     .pipe(dest(path.build.css))
     .pipe(browsersync.stream());
