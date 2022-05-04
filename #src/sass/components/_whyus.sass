@@ -122,7 +122,7 @@
       border-radius: 50%
       opacity: 0.7
       z-index: -3
-      // animation: circle 15s infinite linear
+      animation: circle 17s infinite linear
   &__text
     max-width: 375px
     font-family: 'IkraSlab'
@@ -136,7 +136,5 @@
 @keyframes circle
   0%
     transform: translate(98px, -300px) rotate(0deg) scale(1)
-  50%
-    transform: translate(98px, -300px) rotate(-360deg) scale(1.1)
   100%
-    transform: translate(98px, -300px) rotate(0deg) scale(1)
+    transform: translate(98px, -300px) rotate(360deg) scale(1)

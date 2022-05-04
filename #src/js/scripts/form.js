@@ -69,9 +69,17 @@ validation
 
     sendForm(user).then((data) => {
       // console.log("Успешно!");
+      // modal.classList.add("active");
+      // time();
     });
 
     e.target.reset();
+
+    function time() {
+      document.querySelector('div[class="modal"]').classList.add("active");
+      document.body.classList.add("_lock");
+    }
+    setTimeout(time, 500);
 
     // });
     // конец формы

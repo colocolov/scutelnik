@@ -1,0 +1,41 @@
+.modal
+  position: fixed
+  inset: 0
+  height: 100%
+  width: 100%
+  overflow-x: hidden
+  overflow-y: auto
+  padding-top: 240px
+  padding-bottom: 40px
+  z-index: 100
+  background-color: rgba(0, 0, 0, 0.85)
+  display: none
+  &__inner
+    position: relative
+    width: 850px
+    margin: 0 auto
+    text-align: center
+    background: linear-gradient(72.93deg, rgba(112, 0, 0, 0.5) 0%, rgba(246, 246, 246, 0.15) 99.08%)
+    background-repeat: no-repeat
+    background-size: cover
+    border-radius: 50px
+    border: 3px solid rgba($red, 0.5 )
+    padding: 160px 50px 95px 50px
+  &__top
+    position: absolute
+    left: 50%
+    width: 180px
+    height: 180px
+    top: -85px
+    transform: translate(-50%,0)
+  &__title
+    @include font(400, 32px, 110%)
+    margin-bottom: 30px
+  &__descr
+    // font-family: 'IkraSlab'
+    @include font(500, 20px, 120%)
+    max-width: 520px
+    margin: 0 auto
+    margin-bottom: 60px
+  &.active
+    display: block
