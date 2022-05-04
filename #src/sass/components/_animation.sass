@@ -1,0 +1,17 @@
+@media ( min-width: 992px )
+  .hero-container::after
+    animation: heros 15s infinite linear
+  .whyus__data::after
+    animation: circle 17s infinite linear
+
+@keyframes heros
+  0%
+    transform: translate(-44px, -143px) rotate(0deg)
+  100%
+    transform: translate(-44px, -143px) rotate(-360deg)
+
+@keyframes circle
+  0%
+    transform: translate(98px, -300px) rotate(0deg) scale(1)
+  100%
+    transform: translate(98px, -300px) rotate(360deg) scale(1)

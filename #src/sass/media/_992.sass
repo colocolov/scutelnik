@@ -1,1 +1,99 @@
 @media ( max-width:992px )
+  .header-container
+    justify-content: space-between
+
+  .nav
+    margin-left: 0
+  .nav__item:last-child a
+    margin-left: 70px
+
+  .hero
+    padding-top: 118px
+    &::before
+      top: -167px
+    &__head
+      margin-left: 245px
+
+  .whyus
+    &__features
+      width: 100%
+    &__text
+      font-size: 32px
+    &__list
+      padding: 40px 20px
+      // height: 550px
+    &__item-text
+      width: 200px
+    &__item
+      &:not(:nth-child(3n))
+        margin-bottom: 50px
+      &:nth-child(n)
+        padding-left: 0
+        margin-left: 0
+      &:nth-child(n) .whyus__item-text
+        margin-left: 20px
+      &-img
+        width: 110px
+
+  .services
+    &__title
+      margin-bottom: 75px
+    &__car
+      padding-left: 0
+      padding-right: 0
+      height: 870px
+    &__bg
+      top: 26px
+      width: 625px
+      // transform: translateX(23%)
+      transform: translateX(calc(( 97vw - 625px) / 2 ) )
+    &__item
+      font-size: 18px
+    &__all
+      padding-left: 0
+      padding-right: 0
+      &-list
+        width: 360px
+        background-size: cover
+  .services__list-right .services__item::before
+    width: 100%
+
+  .works
+    &__container::after
+      transform: translate(calc(( 97vw - 1035px) / 2 ), 156px )
+    &__info
+      flex-direction: column
+    &__list
+      order: 2
+    &__order
+      order: 1
+      margin-bottom: 50px
+      &-wrap::before
+        right: -334px
+    &__item
+      &-text
+        width: 100%
+      &:not(:last-child)::after
+        height: 88px
+    &.active
+      padding-top: 1221px
+
+  .footer
+    &__form
+      flex-direction: column
+    &__input
+      width: 50%
+      &-wrap
+        width: 100%
+        margin-bottom: 20px
+    &__list
+      height: 180px
+      justify-content: flex-start
+    &__item
+      &:not(:last-child)
+        margin-bottom: 35px
+      &:nth-child(3)
+        flex-basis: auto
+        align-self: flex-start
+      &:nth-child(4)
+        align-self: flex-start

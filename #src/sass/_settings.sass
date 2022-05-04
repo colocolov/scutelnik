@@ -66,18 +66,16 @@ input
   padding: 19px 61px
   transition: all 0.3s linear
   overflow: hidden
-  &::before
+  &:hover::before
     position: absolute
     content: ''
     opacity: 0
     top: -7px
     left: -31px
-    background-image: url(../images/logo-white.svg)
-    background-size: contain
-    background-repeat: no-repeat
-    transform: rotate(-81deg)
     height: 80px
     width: 80px
+    background-image: none
+    transform: rotate(-81deg)
     transition: all 0.3s linear
 
 .unvisible
