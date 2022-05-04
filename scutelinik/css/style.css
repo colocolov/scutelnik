@@ -196,6 +196,12 @@ input {
   height: 0;
 }
 
+.just-validate-error-label {
+  padding-top: 10px;
+  color: #FA2230 !important;
+  font-size: 18px;
+}
+
 .header {
   margin-top: 28px;
 }
@@ -814,6 +820,7 @@ input {
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .footer__input {
   background: #2F2F2F;

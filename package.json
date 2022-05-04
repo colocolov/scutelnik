@@ -37,7 +37,9 @@
     "stylelint": "^14.1.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^24.0.0",
-    "stylelint-order": "^5.0.0"
+    "stylelint-order": "^5.0.0",
+    "webpack": "^5.72.0",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "del": "^6.0.0",

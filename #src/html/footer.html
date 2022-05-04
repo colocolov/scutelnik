@@ -1,21 +1,25 @@
 <footer class="footer" id="contacts">
   <div class="container">
     <h2 class="heading footer__title">Оставить <span>заявку</span></h2>
-    <form action="#" method="POST" class="footer__form">
-      <input
-        class="footer__input"
-        name="user-name"
-        id="name"
-        placeholder="Имя:"
-        type="text"
-      />
-      <input
-        class="footer__input"
-        name="user-phone"
-        id="telephone"
-        placeholder="Телефон:"
-        type="tel"
-      />
+    <form action="#" method="POST" id="fform" class="footer__form">
+      <div class="footer__input-wrap">
+        <input
+          class="footer__input"
+          name="user-name"
+          id="name"
+          placeholder="Имя:"
+          type="text"
+        />
+      </div>
+      <div class="footer__input-wrap">
+        <input
+          class="footer__input"
+          name="user-phone"
+          id="telephone"
+          placeholder="Телефон:"
+          type="tel"
+        />
+      </div>
       <button class="btn-reset btn footer__btn" type="submit">Отправить</button>
     </form>
     <ul class="footer__list" id="order">
