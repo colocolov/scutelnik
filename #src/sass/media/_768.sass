@@ -2,11 +2,172 @@
   body
     &._lock
       overflow: hidden
+      font-size: 16px
+      line-height: 120%
+
+  .container
+    padding-left: 30px
+  .btn
+    @include font(400, 14px, 115%)
+  .heading
+    font-size: 36px
 
   .header
+    margin-top: 60px
+
+  .nav
+    display: none
     position: fixed
     top: 0
     left: 0
     width: 100%
     z-index: 7
-    background-color: $black
+    background-color: $bgc
+
+  .hero
+    &::before
+      // top: -179px
+      // left: -315px
+      background-image: url(../images/bg/head-bg-mob.png)
+      top: -185px
+      right: 0px
+      left: auto
+      height: 724px
+      width: 465px
+      background-size: cover
+      background-position-x: 0
+      transform: translateY(0)
+    &-container
+      &::before
+        width: 200px
+        height: 200px
+        top: -33px
+        left: -50px
+      &::after
+        width: 200px
+        height: 200px
+        top: 172px
+        left: 52px
+    &__head
+      margin-left: 0
+      text-align: right
+      margin-right: 30px
+      // margin-right: auto
+      &::before
+        width: 0
+        height: 0
+    &__btn
+      margin-bottom: 100px
+
+  .whyus
+    &__data
+      &::before
+        width: 451px
+        height: 451px
+        left: 47%
+      &::after
+        width: 355px
+        height: 355px
+        top: 102px
+        left: -45px
+    &__data
+      margin: 0 auto
+      margin-bottom: 100px
+    &__text
+      max-width: 306px
+    &__list
+      height: auto
+    &__item
+      &:not(:last-child)
+        margin-bottom: 40px
+      &-img
+        width: 125px
+        flex-shrink: 0
+      &-text
+        width: 100%
+
+  .services
+    &__car
+      flex-direction: column
+      height: auto
+      padding-left: 75px
+    &__list
+      padding-top: 94px
+      &:nth-child(2)
+        padding-top: 69px
+      &-left
+        text-align: left
+      &-right
+        text-align: left
+    &__bg
+      left: auto
+      right: 0px
+      top: 137px
+      // background-position-x: 0
+      transform: translateX(53%) scale(1.4)
+    &__item
+      &:nth-child(3), &:nth-child(4)
+        color: $bgc
+      &:not(:nth-child(4))
+        margin-bottom: 69px
+      &:nth-child(3), &:nth-child(4)
+        &::before
+          background-color: $red
+    &__btn
+      margin-top: 69px
+      transform: translateX(0)
+    &__all
+      margin-bottom: 150px
+      flex-direction: column
+      padding-left: 50px
+      padding-right: 50px
+      &-list
+        width: 100%
+        background: linear-gradient(252.32deg, rgba(246, 246, 246, 0.2) 29.42%, rgba(112, 0, 0, 0.2) 100%)
+        &:nth-child(1)
+          margin-bottom: 50px
+
+  .services__list-left .services__item
+    &:not(:nth-child(4))
+      margin-bottom: 69px
+  .services__list-right .services__item
+    color: $white
+    &::before
+      background-color: $white
+      left: 0
+      right: auto
+      transform: translate(70%, 11px)
+      width: 150%
+
+  .works
+    padding-top: 615px
+    &.active
+      margin-top: -1778px
+      padding-top: 1421px
+    &__container
+      padding-top: 50px
+    &__wrap
+      background: linear-gradient(72.5deg, rgba(112, 0, 0, 0.2) 1.96%, rgba(246, 246, 246, 0.2) 98.65%)
+    &__order
+      width: 100%
+    &__order-wrap
+      width: 100%
+      background: linear-gradient(72.93deg, rgba(112, 0, 0, 0.2) 0%, rgba(246, 246, 246, 0.2) 99.08%)
+      &::before
+        width: 500px
+        height: 250px
+        right: -266px
+        bottom: -13px
+    &__text
+      width: 65%
+    &__item:not(:last-child)
+      margin-bottom: 45px
+  .works__item:not(:last-child)::after
+    height: 87px
+
+  .footer
+    &__item
+      font-size: 16px
+
+  .just-validate-error-label
+    font-size: 15px
