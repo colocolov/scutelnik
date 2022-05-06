@@ -5,6 +5,10 @@ body
   @extend %body
   background-color: $bgc
   color: $text
+  &._lock
+    overflow: hidden!important
+    height: 100%!important
+    // padding-right: 18px
 
 html,
 body
@@ -43,6 +47,8 @@ input
 
 .logo--header
   height: 50px
+  @media (max-width: 768px)
+    z-index: 35
 
 .heading
   @extend %head
@@ -89,8 +95,3 @@ input
   padding-top: 10px
   color: $red !important
   font-size: 18px
-
-._lock
-  overflow: hidden!important
-  height: 100%!important
-  padding-right: 18px

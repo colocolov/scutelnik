@@ -1,6 +1,5 @@
-.menu
-  // margin-top: 6px
-  margin-left: 50px
+.nav
+  margin-left: 214px
   &__body
     margin-top: -5px
     @media (max-width: 768px)
@@ -10,114 +9,64 @@
       overflow: auto
       top: 0
       right: -100%
-      padding: 150px 30px 50px 70px
-      background-color: rgba($black,0.9)
+      padding: 150px 30px 50px 25%
+      background-color: rgba($bgc,0.7)
       transition: right 0.5s ease 0s
-      &::before
-        content: ''
-        position: fixed
-        width: 100%
-        height: 116px
-        top: 0
-        right: -100%
-        background-color: rgba($black,0.9)
-        transition: right 0.5s ease 0s
-        z-index: 2
+      z-index: 20
     &._active
-      right: 0
+      right: 0px
+      top: 5px
+      // bottom: 0
       &::before
         right: 0
   &__list
     @include fl-all
     flex-wrap: wrap
     @media (max-width: 768px)
+      background-color: rgba($bgc,0.9)
+      border: 3px solid rgba($red,0.5)
+      border-radius: 20px
+      padding: 100px 70px
       flex-direction: column
       align-items: flex-start
 
   &__item
     position: relative
     @include fl-all
-    flex-wrap: wrap
-    margin: 0 3px
-    padding: 5px 0
+    // flex-wrap: wrap
+    // margin: 0 3px
+    // padding: 5px 0
 
-    font-weight: 800
-    font-size: 14px
-    line-height: 160%
-    letter-spacing: 0.2em
-    text-transform: uppercase
-    color: #f6f6f6
-    transition: color 0.3s ease-in-out
     &:not(:last-child)
-      margin-right: 39px
-    @media (any-hover: hover)
-      &:hover
-        .menu__sub-list
-          transform: translate(0px, 0px)
-          opacity: 1
-          visibility: visible
-          pointer-events: auto
-        .menu__arrow
-          transform: rotate(-180deg)
-        .menu__arrow
-          color: $orange
-    @media (min-width: 768px)
-      &._hover
-        .menu__sub-list
-          transform: translate(0px, 0px)
-          opacity: 1
-          visibility: visible
-          pointer-events: auto
-        .menu__arrow
-          transform: rotate(-180deg)
+      margin-right: 42px
+      &::before
+        position: absolute
+        content: ''
+        display: block
+        bottom: -6px
+        // left: 0
+        // right: 0
+        height: 2px
+        width: 0%
+        background-color: $red
+        transition: 0.5s
+    &:last-child a
+      transition: 0.3s linear
+      margin-left: 120px
+    @include font(500, 14px, 120%)
     @media (max-width: 768px)
-      margin-bottom: 40px
+      // margin-bottom: 40px
       font-weight: 800
       font-size: 18px
+      text-transform: uppercase
+      letter-spacing: 0.5px
       &:not(:last-child)
         margin-right: 0
-        margin-bottom: 10px
-
-  &__arrow
-    margin-left: 4px
-    // margin-top: -10px
-    transition: all 0.3s ease-in-out
-    background-color: transparent
-    border: none
-    outline: none
-    cursor: pointer
-    width: 12px
-    height: 12px
-    background-image: url(../images/icons/sprite.svg#arrow-menu)
-    background-repeat: no-repeat
-    background-size: 10px
-    background-position: center
-    // transform: rotate(90deg)
-
-  &__sub-list
-    position: relative
-    background-color: $orange
-    padding: 15px
-    flex: 1 1 100%
-    @media ( min-width: 768px )
-      position: absolute
-      left: 0
-      top: 100%
-      opacity: 0
-      visibility: hidden
-      min-width: 50px
-      transition: all 0.3s ease-in-out
-      transform: translate(0px, 10px)
-      pointer-events: none
-  &__sub-item
-    color: $black
-    line-height: 120%
-    &:not(:last-child)
-      margin-bottom: 5px
-    a
-      color: $white
-      &:hover
-        text-decoration: underline
+        margin-bottom: 15px
+      &:last-child a
+        padding-top: 30px
+        margin-left: 0 !important
+        color: $red
 
   &__icon
     display: none
@@ -130,7 +79,7 @@
       width: 32px
       height: 29px
       cursor: pointer
-      z-index: 5
+      z-index: 25
       background-color: transparent
       outline: none
       border: none
