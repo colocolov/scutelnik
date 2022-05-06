@@ -1,9 +1,7 @@
 @media ( max-width:768px )
   body
-    &._lock
-      overflow: hidden
-      font-size: 16px
-      line-height: 120%
+    font-size: 16px
+    line-height: 120%
 
   .container
     padding-left: 30px
@@ -14,15 +12,6 @@
 
   .header
     margin-top: 60px
-
-  .nav
-    display: none
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    z-index: 7
-    background-color: $bgc
 
   .hero
     &::before
@@ -121,6 +110,8 @@
       flex-direction: column
       padding-left: 50px
       padding-right: 50px
+      &::before
+        background: url(../images/bg/services-circles-mob.svg)
       &-list
         width: 100%
         background: linear-gradient(252.32deg, rgba(246, 246, 246, 0.2) 29.42%, rgba(112, 0, 0, 0.2) 100%)
@@ -153,6 +144,7 @@
     &__order-wrap
       width: 100%
       background: linear-gradient(72.93deg, rgba(112, 0, 0, 0.2) 0%, rgba(246, 246, 246, 0.2) 99.08%)
+      padding: 46px 50px
       &::before
         width: 500px
         height: 250px
@@ -162,6 +154,8 @@
       width: 65%
     &__item:not(:last-child)
       margin-bottom: 45px
+    &__btn
+      margin-top: 30px
   .works__item:not(:last-child)::after
     height: 87px
 

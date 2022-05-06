@@ -9,7 +9,7 @@
       overflow: auto
       top: 0
       right: -100%
-      padding: 150px 30px 50px 25%
+      padding: 90px 30px 50px 25%
       background-color: rgba($bgc,0.7)
       transition: right 0.5s ease 0s
       z-index: 20
@@ -23,12 +23,17 @@
     @include fl-all
     flex-wrap: wrap
     @media (max-width: 768px)
+      position: relative
       background-color: rgba($bgc,0.9)
       border: 3px solid rgba($red,0.5)
       border-radius: 20px
       padding: 100px 70px
       flex-direction: column
       align-items: flex-start
+      // transition: 1s
+      // right: -120%
+      // animation: show 3s 1
+      // animation-delay: 2s
 
   &__item
     position: relative
