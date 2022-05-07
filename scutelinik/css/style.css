@@ -228,7 +228,7 @@ input {
   }
 }
 .header__nav {
-  margin-left: 120px;
+  margin-left: 216px;
 }
 
 .logo {
@@ -1164,6 +1164,9 @@ input {
 @media (max-width: 992px) {
   .header-container {
     justify-content: space-between;
+  }
+  .header__nav {
+    margin-left: 0;
   }
 
   .nav {
