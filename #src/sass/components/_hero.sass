@@ -1,6 +1,5 @@
 .hero
   position: relative
-  // height: 833px
   padding-top: 181px
   padding-bottom: 230px
   &::before
@@ -33,7 +32,6 @@
     z-index: -2
   &-container
     position: relative
-    // margin-bottom: 229px
     padding-bottom: 230px
     &::before
       position: absolute
@@ -50,41 +48,30 @@
       content: ''
       top: 0
       left: 0
-      // transform: translate(-44px, -143px)
       width: 484px
       height: 484px
-      // border-radius: 50%
       background: url(../images/bg/head-blur.svg), linear-gradient(136.6deg, rgba(57, 57, 57, 0.5) 16.51%, rgba(57, 57, 57, 0) 60.77%)
       background-size: contain
       background-repeat: no-repeat
-      // background-color:
-      // filter: blur(10px)
       transform: translate(-44px, -143px)
       backdrop-filter: blur(2px)
-      // border: 3px solid $red
       border-radius: 50%
       opacity: 0.7
       z-index: -1
 
-      // animation-name: heros
-      // animation-duration: 5s
-      // animation-timing-function: linear
-      // animation-iteration-count: infinite
-      // animation-delay: 3s
-
   &__title
-    color: $red
     margin-bottom: 22px
+    color: $red
   &__descr
     max-width: 362px
     margin-bottom: 30px
     @include font(500, 20px, 115%)
   &__btn
-    margin-bottom: 82px
     display: inline-block
+    margin-bottom: 82px
   &__head
-    margin-left: 620px
     position: relative
+    margin-left: 620px
     &::before
       position: absolute
       content: ''

@@ -93,21 +93,24 @@ function html() {
 
 // build version html
 function htmlBuild() {
-  return src(path.src.html)
-    .pipe(
-      fileinclude({
-        prefix: "@",
-        basepath: "@file",
-      })
-    )
-    .pipe(webphtml())
-    .pipe(
-      htmlmin({
-        // collapseWhitespace: true, // удаляем все переносы
-        removeComments: true, // удаляем все комментарии
-      })
-    )
-    .pipe(dest(path.build.html));
+  return (
+    src(path.src.html)
+      .pipe(
+        fileinclude({
+          prefix: "@",
+          basepath: "@file",
+        })
+      )
+      .pipe(replace(/@img\//g, "images/"))
+      //.pipe(webphtml())
+      .pipe(
+        htmlmin({
+          // collapseWhitespace: true, // удаляем все переносы
+          removeComments: true, // удаляем все комментарии
+        })
+      )
+      .pipe(dest(path.build.html))
+  );
 }
 
 function css() {
@@ -352,7 +355,6 @@ let done = gulp.series(
   cleanDist,
   gulp.parallel(
     cssBuild,
-    cssAdd,
     htmlBuild,
     jsBuild,
     jsAdd,

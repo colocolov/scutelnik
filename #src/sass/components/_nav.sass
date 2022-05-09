@@ -6,42 +6,36 @@
       position: fixed
       width: 100%
       height: 100%
-      overflow: auto
       top: 0
       right: -100%
       padding: 90px 30px 50px 25%
       background-color: rgba($bgc,0.7)
-      transition: right 0.5s ease 0s
+      overflow: auto
       z-index: 20
     &._active
       right: 0px
       top: 5px
-      // bottom: 0
-      &::before
-        right: 0
   &__list
     @include fl-all
     flex-wrap: wrap
     @media (max-width: 768px)
       position: relative
+      flex-direction: column
+      align-items: flex-start
+      top: 0
+      right: -100%
+      padding: 100px 70px
       background-color: rgba($bgc,0.9)
       border: 3px solid rgba($red,0.5)
       border-radius: 20px
-      padding: 100px 70px
-      flex-direction: column
-      align-items: flex-start
-      // transition: 1s
-      // right: -120%
-      // animation: show 3s 1
-      // animation-delay: 2s
+      transition: right 0.5s ease 0s
+    &._active
+      right: 0px
+      top: 5px
 
   &__item
     position: relative
     @include fl-all
-    // flex-wrap: wrap
-    // margin: 0 3px
-    // padding: 5px 0
-
     &:not(:last-child)
       margin-right: 42px
       &::before
@@ -49,10 +43,8 @@
         content: ''
         display: block
         bottom: -6px
-        // left: 0
-        // right: 0
-        height: 2px
         width: 0%
+        height: 2px
         background-color: $red
         transition: 0.5s
     &:last-child a
@@ -60,7 +52,6 @@
       margin-left: 120px
     @include font(500, 14px, 120%)
     @media (max-width: 768px)
-      // margin-bottom: 40px
       font-weight: 800
       font-size: 18px
       text-transform: uppercase
@@ -78,8 +69,6 @@
     @media ( max-width: 768px )
       display: block
       position: relative
-      // top: 18px
-      // right: 10px
       flex: 0 0 35px
       width: 35px
       height: 22px

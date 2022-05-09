@@ -1,14 +1,12 @@
 html
   scroll-behavior: smooth
 body
-  // заменить ниже на свои значения
   @extend %body
   background-color: $bgc
   color: $text
   &._lock
     overflow: hidden!important
     height: 100%!important
-    // padding-right: 18px
 
 html,
 body
@@ -64,23 +62,25 @@ input
 
 .btn
   position: relative
+  padding: 19px 61px
   background: linear-gradient(270deg, #FA2230 0%, #700000 100%)
   border-radius: 30px
-  text-transform: uppercase
   @include font(500, 20px, 115%)
+  text-transform: uppercase
   color: $white
-  padding: 19px 61px
   transition: all 0.3s linear
   overflow: hidden
-  &:hover::before
+  &::before
     position: absolute
     content: ''
-    opacity: 0
     top: -7px
     left: -31px
-    height: 80px
     width: 80px
+    height: 80px
     background-image: none
+    background-size: contain
+    background-repeat: no-repeat
+    opacity: 0
     transform: rotate(-81deg)
     transition: all 0.3s linear
 

@@ -5,45 +5,41 @@
     margin-bottom: 53px
 
   &__form
-    margin-bottom: 30px
     display: flex
     justify-content: space-between
     align-items: flex-start
+    margin-bottom: 30px
   &__input
+    width: 465px
+    padding: 18px 35px
     background: #2F2F2F
     border: 1px solid rgba(246, 246, 246, 0.3)
     border-radius: 20px
-    padding: 18px 35px
     color: $white
-    // margin-right: 30px
-    width: 465px
     transition: all 0.3s linear
     cursor: pointer
     &::placeholder
-      color: $red
-      text-transform: uppercase
       font-size: 20px
+      text-transform: uppercase
+      color: $red
   &__btn
     padding: 19px 69px
 
   &__list
-    background: #2F2F2F
-    border: 1px solid rgba(246, 246, 246, 0.3)
-    border-radius: 20px
-    padding: 29px 35px
     display: flex
     justify-content: space-between
     flex-direction: column
     flex-wrap: wrap
     height: 120px
+    padding: 29px 35px
+    background: #2F2F2F
+    border: 1px solid rgba(246, 246, 246, 0.3)
+    border-radius: 20px
   &__item
-    // margin-bottom: 15px
     @include font(500, 20px, 115%)
     &:nth-child(3)
       align-self: center
-      // text-align: center
       flex-basis: 100%
-      // line-height: 200%
     &:nth-child(4)
       align-self: flex-end
     a

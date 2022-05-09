@@ -2,8 +2,6 @@
   .nav__item:hover
     &::before
       width: 100%
-      // height: 1px
-      // border-bottom: 1px solid $red
     &:last-child a
       color: $red
 
@@ -11,17 +9,14 @@
     transform: rotate(360deg)
 
   .btn:hover
-    // transform: scale(1.01)
     letter-spacing: 0.1px
     background: linear-gradient(270deg, #f90615 0%, #640000 100%)
     &::before
       top: -7px
       left: -1px
-      transform: rotate(-21deg)
-      opacity: 0.2
       background-image: url(../images/logo-white.svg)
-      background-size: contain
-      background-repeat: no-repeat
+      opacity: 0.2
+      transform: rotate(-21deg)
 
   .footer__input:focus
     border: 1px solid $red

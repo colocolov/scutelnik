@@ -1,16 +1,12 @@
 .works
   position: relative
-  // top: -200px
   padding-top: 580px
   padding-bottom: 255px
   margin-top: -748px
-  // transform: translateY(-748px)
   background: #000
   &.active
     padding-top: 1292px
     margin-top: -1440px
-    // transition: all 0.5s linear
-
   &::before
     position: absolute
     content: ''
@@ -19,7 +15,6 @@
     left: 0
     right: 0
     background: radial-gradient(90.29% 65.53% at 50% -2.52%, #FA2230 0%, rgba(202, 0, 19, 0) 99.55%)
-    // z-index: 1
   &__container
     position: relative
     &::after
@@ -33,14 +28,12 @@
       background-repeat: no-repeat
       background-size: contain
       transform: translate(9%, 156px)
-      // animation: circs 35s infinite linear
   &__wrap
     position: relative
     padding: 54px 62px 89px 60px
     background: url('../images/bg/works-border.svg'), linear-gradient(72.5deg, rgba(112, 0, 0, 0.2) 1.96%, rgba(246, 246, 246, 0.2) 98.65%)
     background-repeat: no-repeat
     background-size: cover
-    //  linear-gradient(72.5deg, rgba(112, 0, 0, 0.2) 1.96%, rgba(246, 246, 246, 0.2) 98.65%)
     backdrop-filter: blur(30px)
     border-radius: 50px
     z-index: 3
@@ -75,9 +68,7 @@
         width: 1px
         height: 110px
         background: $white
-        // z-index: -1
     &-title
-      // font-family: 'Gilroy-Medium'
       @include font(500, 20px, 115%)
       color: $red
     &-text
@@ -106,19 +97,13 @@
         background-repeat: no-repeat
         background-size: cover
     &-title
+      margin-bottom: 26px
       font-family: 'IkraSlab'
       @include font(400, 48px, 100%)
-      margin-bottom: 26px
   &__text
     width: 309px
     @include font(500, 20px, 115%)
 
   &__btn
-    padding: 19px 37px
     display: inline-block
-
-@keyframes circs
-  0%
-    transform: translate(9%, 156px) rotate(0deg)
-  100%
-    transform: translate(9%, 156px) rotate(-360deg)
+    padding: 19px 37px
