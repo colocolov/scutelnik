@@ -310,6 +310,7 @@ modalBtn.addEventListener("click", (e) => {
 // мобильное меню
 
 // меню бургер
+const header = document.querySelector(".header");
 const iconMenu = document.querySelector(".nav__icon");
 const menuBody = document.querySelector(".nav__body");
 const menuList = document.querySelector(".nav__list");
