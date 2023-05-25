@@ -6,7 +6,10 @@
   background: #000
   &.active
     padding-top: 1292px
-    margin-top: -1440px
+    // margin-top: -1440px
+    margin-top: -1390px
+  &-ro.active
+    margin-top: -1411px
   &::before
     position: absolute
     content: ''
@@ -68,6 +71,8 @@
         width: 1px
         height: 110px
         background: $white
+    &-ro
+      margin-bottom: 47px !important
     &-title
       @include font(500, 20px, 115%)
       color: $red
